@@ -34,12 +34,7 @@
         loadPage("home");
     }
 
-    window.addEventListener("hashchange", function() {
-        const page = location.hash.substring(1);
-        console.log(page);
-        loadPage(page);
-        updateSidebarActive();
-    });
+    window.addEventListener("hashchange", router);
 </script>
 </body>
 </html>
