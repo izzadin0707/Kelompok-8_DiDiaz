@@ -1,5 +1,5 @@
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 4px;
     height: 8px;
 }
 
@@ -13,5 +13,30 @@
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #280037;
+    background: #360049;
+}
+
+button {
+    transition: all 0.2s ease-in-out !important;
+}
+
+.bg-purple {
+    background-color: #360049;
+}
+
+.text-purple {
+    color: #360049;
+}
+
+.btn-primary {
+    background-color: #360049 !important;
+    border-color: #360049 !important;
+}
+
+.btn-primary:hover {
+    filter: brightness(90%) !important;
+}
+
+.cursor-pointer {
+    cursor: pointer;
 }
