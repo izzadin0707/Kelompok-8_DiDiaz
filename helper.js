@@ -10,38 +10,32 @@ function router() {
 }
 
 function loadPage(page) {
-    $("#content").load(`pages/${page}/index.html`, function (response, status) {
-        if (status === "error") {
-            $("#content").load("pages/404/index.html");
-        }
+    $("#content").animate({ opacity: 0 }, 100, function () {
+        $(this).load(`pages/${page}/index.html`, function (response, status) {
+            if (status === "error") {
+                $(this).load("pages/404/index.html");
+            }
+        });
+        $(this).delay(100).animate({ opacity: 1 }, 100);
     });
 }
 
 function updateSidebarActive() {
-
-    const currentPage = location.hash.substring(1);
-    const sidebarLinks = $("#sidebar .nav-link");
+    const currentPage = location.hash.substring(2);
+    const sidebarLinks = $("#sidebar li");
 
     if (currentPage) {
-
         sidebarLinks.each(function () {
-
-            const linkPage =
-                $(this).attr("href").substring(1);
+            const linkPage = $(this).attr("id");
 
             if (linkPage === currentPage) {
                 $(this).addClass("active");
             } else {
                 $(this).removeClass("active");
             }
-
         });
-
     } else {
-
         sidebarLinks.removeClass("active");
-
-        $("#sidebar .nav-link[href='#home']")
-            .addClass("active");
+        $("#sidebar #home").addClass("active");
     }
 }
