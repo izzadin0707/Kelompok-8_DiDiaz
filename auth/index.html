@@ -56,7 +56,7 @@
 </style>
 
 <script>
-    const currentPage = location.hash.substring(1);
+    const currentPage = location.hash.substring(2);
 
     if (currentPage) {
         loadAuth(currentPage);
@@ -77,9 +77,9 @@
 
     function loadAuth(page) {
         $("#content").animate({ opacity: 0 }, 100, function () {
-            $(this).load(`/auth/${page}/index.html`, function (response, status) {
+            $(this).load(`./${page}/index.html`, function (response, status) {
                 if (status === "error") {
-                    $(this).load("/auth/404/index.html");
+                    $(this).load("./404/index.html");
                 }
             });
             $(this).delay(100).animate({ opacity: 1 }, 100);
