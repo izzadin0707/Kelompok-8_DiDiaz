@@ -37,6 +37,16 @@ button {
     filter: brightness(90%) !important;
 }
 
+.btn-outline-primary {
+    border-color: #360049 !important;
+    color: #360049 !important;
+}
+
+.btn-outline-primary:hover {
+    background-color: #360049 !important;
+    color: #fff !important;
+}
+
 .cursor-pointer {
     cursor: pointer;
 }
