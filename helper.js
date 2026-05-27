@@ -35,8 +35,8 @@ function loadPage(page) {
             if (status === "error") {
                 $(this).load("pages/404/index.html");
             }
+            $(this).delay(100).animate({ opacity: 1 }, 100);
         });
-        $(this).delay(100).animate({ opacity: 1 }, 100);
     });
 }
 
