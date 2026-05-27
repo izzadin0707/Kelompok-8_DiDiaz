@@ -47,6 +47,10 @@ button {
     color: #fff !important;
 }
 
+.input-danger {
+    border-color: #dc3545 !important;
+}
+
 .cursor-pointer {
     cursor: pointer;
 }

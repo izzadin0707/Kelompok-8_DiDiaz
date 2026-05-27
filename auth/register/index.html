@@ -4,24 +4,24 @@
         <img src="../assets/Logo.svg" alt="Logo DiDiaz" style="width: 180px;">
         <div>
             <h3 class="text-purple fw-bold mb-3">Daftar Akun DiDiaz</h3>
-            <form id="loginForm" class="text-purple" style="width: 380px;">
+            <form id="registerForm" class="text-purple" style="width: 380px;">
 
                 <div class="mb-3">
-                    <input type="text" class="form-control fw-semibold py-2" id="name" placeholder="Nama Lengkap">
+                    <input type="text" class="form-control fw-semibold py-2" id="name" placeholder="Nama Lengkap" required>
                 </div>
 
                 <div class="mb-3">
-                    <input type="email" class="form-control fw-semibold py-2" id="email" placeholder="Alamat Email">
+                    <input type="email" class="form-control fw-semibold py-2" id="email" placeholder="Alamat Email" required>
                 </div>
 
                 <div class="mb-3 position-relative">
                     <i class="bx bx-eye position-absolute fs-5" style="top: 50%; right: 12px; transform: translateY(-50%); cursor: pointer;" onclick="showPassword(this)"></i>
-                    <input type="password" class="form-control fw-semibold py-2" id="password" placeholder="Masukan Password">
+                    <input type="password" class="form-control fw-semibold py-2" id="password" placeholder="Masukan Password" required>
                 </div>
 
                 <div class="mb-3 position-relative">
                     <i class="bx bx-eye position-absolute fs-5" style="top: 50%; right: 12px; transform: translateY(-50%); cursor: pointer;" onclick="showPassword(this)"></i>
-                    <input type="password" class="form-control fw-semibold py-2" id="confirmPassword" placeholder="Konfirmasi Password">
+                    <input type="password" class="form-control fw-semibold py-2" id="confirmPassword" placeholder="Konfirmasi Password" required>
                 </div>
                 
                 <button type="submit" class="btn btn-primary py-2 w-100 rounded-3 fw-semibold mb-3">Daftar</button>
@@ -32,7 +32,7 @@
                     <div class="w-100" style="border-top: 1.5px solid #6c757d;"></div>
                 </div>
 
-                <button class="btn btn-outline-primary py-2 w-100 rounded-3 fw-semibold mb-3">
+                <button type="button" class="btn btn-outline-primary py-2 w-100 rounded-3 fw-semibold mb-3">
                     <i class="bi bi-google me-2"></i>
                     Daftar dengan Google
                 </button>
@@ -48,3 +48,39 @@
     </div>
 
 </div>
+
+<script>
+    $("#registerForm").submit(function(e) {
+        e.preventDefault();
+
+        const name = $("#name").val();
+        const email = $("#email").val();
+        const password = $("#password").val();
+        const confirmPassword = $("#confirmPassword").val();
+
+        if (password !== confirmPassword) {
+            $("#password, #confirmPassword").addClass("input-danger");
+            $("#confirmPassword").focus();
+            alert("Password dan konfirmasi password tidak cocok!");
+            return;
+        }
+
+        const user = {
+            name: name,
+            email: email,
+            password: password
+        }
+
+        localStorage.setItem("user", JSON.stringify(user));
+
+        const data = {
+            name: name,
+            email: email,
+            isLogin: true
+        }
+
+        Session.set("login", data);
+
+        location.href = "../";
+    });
+</script>

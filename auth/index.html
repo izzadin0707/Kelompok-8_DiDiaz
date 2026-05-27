@@ -56,19 +56,23 @@
 </style>
 
 <script>
+    if (isLoggedIn()) {
+        location.href = "../";
+    }
+
     const currentPage = location.hash.substring(2);
 
     if (currentPage) {
         loadAuth(currentPage);
     } else {
-        location.hash = "/login";
+        loadAuth("login");
     }
 
     window.addEventListener("hashchange", function() {
         const page = location.hash.substring(2);
 
         if (!page || page.trim() === "") {
-            location.hash = "/login";
+            location.href = "";
             return;
         }
 
@@ -81,8 +85,8 @@
                 if (status === "error") {
                     $(this).load("./404/index.html");
                 }
+                $(this).delay(100).animate({ opacity: 1 }, 100);
             });
-            $(this).delay(100).animate({ opacity: 1 }, 100);
         });
     }
 

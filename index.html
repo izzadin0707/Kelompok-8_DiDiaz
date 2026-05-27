@@ -26,12 +26,18 @@
         </div>
 
 <script>
-    $("#navbar").load("components/navbar.html");
+    if (!isLoggedIn()) {
+        location.href = "auth";
+    }
+
+    const user = Session.get("login") || JSON.parse(localStorage.getItem("login"));
+
+    $("#navbar").load("components/navbar.html", function() {
+        $("#welcome-message").text(`Selamat Datang ${user.name}!`);
+    });
     $("#sidebar").load("components/sidebar.html", function () {
         $("#main-wrapper").css("margin-left", $("#sidebar > div").outerWidth());
     });
-
-
 
     const currentPage = location.hash.substring(2);
 
