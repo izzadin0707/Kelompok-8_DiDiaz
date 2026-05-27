@@ -1,0 +1,784 @@
+.learning-path {
+  background-color: var(--foundation-whitenormal);
+  overflow: hidden;
+  width: 100%;
+  min-width: 1440px;
+  min-height: 1120px;
+  position: relative;
+}
+
+/* ==========================================
+   SIDEBAR COMPONENT
+   ========================================== */
+.learning-path .side-bar {
+  position: fixed;
+  top: 0;
+  left: -10px;
+  width: 230px;
+  height: 1120px;
+  background-color: var(--foundationpurpledark-hover);
+  box-shadow: 4px 0px 4px #00000040;
+}
+
+.learning-path .logo {
+  position: absolute;
+  top: 9px;
+  left: 60px;
+  width: 120px;
+  height: 120px;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+.learning-path .ellipse {
+  position: absolute;
+  top: 19px;
+  left: 70px;
+  width: 100px;
+  height: 100px;
+  background-color: #d9d9d9;
+  border-radius: 50px;
+}
+
+/* Sidebar Navigation Items */
+.learning-path .frame-10 {
+  position: absolute;
+  top: 151px;
+  left: -1px;
+  width: 231px;
+  height: 56px;
+  display: flex;
+  gap: 8px;
+}
+
+.learning-path .home {
+  margin-top: 15px;
+  width: 24px;
+  height: 24px;
+  margin-left: 39px;
+  aspect-ratio: 1;
+}
+
+.learning-path .text-wrapper-10 {
+  margin-top: 19px;
+  width: 46px;
+  height: 19px;
+  font-family: "Inter-SemiBold", Helvetica;
+  font-weight: 600;
+  color: var(--foundation-whitenormal);
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+/* Active State / Highlight indicator in Sidebar */
+.learning-path .rectangle-12 {
+  position: absolute;
+  top: 219px;
+  left: 29px;
+  width: 182px;
+  height: 42px;
+  background-color: var(--foundation-whitenormal);
+  border-radius: 5px;
+}
+
+.learning-path .img-2 {
+  position: absolute;
+  top: 227px;
+  left: 38px;
+  width: 24px;
+  height: 24px;
+  aspect-ratio: 1;
+}
+
+.learning-path .text-wrapper-8 {
+  position: absolute;
+  top: 230px;
+  left: 70px;
+  font-family: "Inter-SemiBold", Helvetica;
+  font-weight: 600;
+  color: var(--foundationpurpledark-hover);
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.learning-path .frame-11 {
+  position: absolute;
+  top: 271px;
+  left: -1px;
+  width: 231px;
+  height: 52px;
+  display: flex;
+  gap: 8px;
+}
+
+.learning-path .academy {
+  margin-top: 17px;
+  width: 24px;
+  height: 24px;
+  margin-left: 39px;
+  aspect-ratio: 1;
+}
+
+.learning-path .text-wrapper-11 {
+  margin-top: 19px;
+  width: 73px;
+  height: 19px;
+  font-family: "Inter-SemiBold", Helvetica;
+  font-weight: 600;
+  color: var(--foundation-whitenormal);
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.learning-path .frame-12 {
+  position: absolute;
+  top: 331px;
+  left: 0;
+  width: 230px;
+  height: 50px;
+  display: flex;
+  gap: 8px;
+}
+
+.learning-path .profile {
+  margin-top: 14px;
+  width: 24px;
+  height: 24px;
+  margin-left: 38px;
+  aspect-ratio: 1;
+}
+
+.learning-path .text-wrapper-12 {
+  margin-top: 19px;
+  width: 50px;
+  height: 19px;
+  font-family: "Inter-SemiBold", Helvetica;
+  font-weight: 600;
+  color: var(--foundation-whitenormal);
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+/* Sidebar Footer (Settings & Logout) */
+.learning-path .famicons-settings {
+  position: absolute;
+  top: 813px;
+  left: 39px;
+  width: 22px;
+  height: 22px;
+  display: flex;
+  aspect-ratio: 1;
+}
+
+.learning-path .vector-9 {
+  flex: 1;
+  width: 19.25px;
+}
+
+.learning-path .text-wrapper-9 {
+  position: absolute;
+  top: 815px;
+  left: 70px;
+  font-family: "Inter-SemiBold", Helvetica;
+  font-weight: 600;
+  color: var(--foundation-whitenormal);
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.learning-path .frame-13 {
+  position: absolute;
+  top: 855px;
+  left: 0;
+  width: 230px;
+  height: 59px;
+  display: flex;
+  gap: 8px;
+}
+
+.learning-path .mdi-logout {
+  margin-top: 18px;
+  width: 24px;
+  height: 24px;
+  margin-left: 38px;
+  display: flex;
+  transform: rotate(180deg);
+  aspect-ratio: 1;
+}
+
+.learning-path .vector-10 {
+  flex: 1;
+  width: 20px;
+  transform: rotate(-180deg);
+}
+
+.learning-path .text-wrapper-13 {
+  margin-top: 20px;
+  width: 50px;
+  height: 19px;
+  font-family: "Inter-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #ffa8a8;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+
+/* ==========================================
+   HEADER / TOPBAR COMPONENT
+   ========================================== */
+.learning-path .group-4 {
+  position: fixed;
+  top: -18px;
+  left: 220px;
+  width: 1220px;
+  height: 110px;
+  display: flex;
+  background-color: var(--foundationpurpledark-hover);
+  box-shadow: 0px 4px 4px #00000040;
+}
+
+/* Search Bar Inside Header */
+.learning-path .group-5 {
+  margin-top: 34px;
+  width: 368px;
+  height: 50px;
+  position: relative;
+  margin-left: 24px;
+}
+
+.learning-path .rectangle-11 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 366px;
+  height: 50px;
+  background-color: #3d1a49;
+  border-radius: 10px;
+  border: 1px solid;
+  border-color: var(--foundation-whitenormal);
+}
+
+.learning-path .boxicons-search {
+  position: absolute;
+  top: 14px;
+  left: 19px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  aspect-ratio: 1;
+}
+
+.learning-path .vector-7 {
+  flex: 1;
+  width: 19.41px;
+}
+
+.learning-path .text-wrapper-7 {
+  position: absolute;
+  top: 16px;
+  left: 54px;
+  font-family: "Inter-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+  background: transparent;
+  border: 0;
+  padding: 0;
+}
+
+.learning-path .text-wrapper-7::placeholder {
+  color: #ffffff;
+  opacity: 1;
+}
+
+.learning-path .text-wrapper-7:focus {
+  outline: none;
+}
+
+/* Notification & Profile Button */
+.learning-path .vector-wrapper {
+  margin-top: 41px;
+  width: 45px;
+  height: 45px;
+  margin-left: 647px;
+  display: flex;
+  aspect-ratio: 1;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.learning-path .vector-8 {
+  flex: 1;
+  width: 31.88px;
+}
+
+.learning-path .image {
+  margin-top: 37px;
+  width: 53px;
+  height: 53px;
+  margin-left: 38px;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+
+/* ==========================================
+   MAIN CONTENT & CATEGORIES
+   ========================================== */
+.learning-path .group {
+  position: absolute;
+  top: 121px;
+  left: 244px;
+  width: 1158px;
+  height: 80px;
+  background-color: var(--foundationpurpledark-hover);
+  border-radius: 10px;
+}
+
+.learning-path .navbar {
+  display: flex;
+  width: 89.72%;
+  height: 23.75%;
+  align-items: center;
+  gap: 37px;
+  position: absolute;
+  top: 37.50%;
+  left: 5.14%;
+  background-color: var(--foundationpurpledark-hover);
+}
+
+.learning-path .text-wrapper {
+  position: relative;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: "Inter-SemiBold", Helvetica;
+  font-weight: 600;
+  color: var(--foundation-whitenormal);
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.learning-path .frame {
+  position: absolute;
+  width: 11.74%;
+  height: 80.00%;
+  top: 12.50%;
+  left: 2.68%;
+}
+
+.learning-path .rectangle {
+  position: relative;
+  width: 65.44%;
+  height: 6.25%;
+  top: 73.44%;
+  left: 19.12%;
+  background-color: var(--foundation-whitenormal);
+  border-radius: 2px;
+}
+
+/* Typography Title & Description */
+.learning-path .div {
+  position: absolute;
+  top: 249px;
+  left: 775px;
+  font-family: var(--h1-bold-font-family);
+  font-weight: var(--h1-bold-font-weight);
+  color: var(--foundationpurpledark-hover);
+  font-size: var(--h1-bold-font-size);
+  letter-spacing: var(--h1-bold-letter-spacing);
+  line-height: var(--h1-bold-line-height);
+  font-style: var(--h1-bold-font-style);
+}
+
+.learning-path .p {
+  position: absolute;
+  top: 307px;
+  left: 488px;
+  width: 732px;
+  font-family: "Inter-Medium", Helvetica;
+  font-weight: 500;
+  color: #000000;
+  font-size: 16px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+
+/* ==========================================
+   CARDS & COLUMNS GRID (LEFT & RIGHT)
+   ========================================== */
+/* Left Column Layout */
+.learning-path .frame-2 {
+  display: flex;
+  flex-direction: column;
+  width: 455px;
+  align-items: flex-start;
+  gap: 26px;
+  position: absolute;
+  top: 407px;
+  left: 343px;
+}
+
+/* Right Column Layout */
+.learning-path .frame-9 {
+  display: flex;
+  flex-direction: column;
+  width: 455px;
+  align-items: flex-start;
+  gap: 26px;
+  position: absolute;
+  top: 407px;
+  left: 887px;
+}
+
+/* Middle Divider Line */
+.learning-path .adlaah {
+  position: absolute;
+  top: 407px;
+  left: 837px;
+  width: 11px;
+  height: 541px;
+  background-color: var(--foundationpurpledark-hover);
+  border-radius: 15.5px;
+}
+
+/* Individual Card Styles */
+.learning-path .group-2 {
+  position: relative;
+  width: 457px;
+  height: 163px;
+  margin-right: -2px;
+}
+
+.learning-path .rectangle-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 455px;
+  height: 163px;
+  background-color: var(--foundationpurpledark-hover);
+  border-radius: 20px;
+  box-shadow: 0px 4px 5px #00000080;
+}
+
+.learning-path .text-wrapper-2,
+.learning-path .text-wrapper-6 {
+  position: absolute;
+  top: 49px;
+  left: 16px;
+  font-family: "Inter-Bold", Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 20px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.learning-path .text-wrapper-6 {
+  left: 17px;
+}
+
+/* Card Badge - Step Tracker */
+.learning-path .frame-3 {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  position: absolute;
+  top: 18px;
+  left: 17px;
+}
+
+.learning-path .group-3 {
+  position: relative;
+  width: 13px;
+  height: 12px;
+}
+
+.learning-path .rectangle-3 {
+  position: absolute;
+  top: 8px;
+  left: 0;
+  width: 4px;
+  height: 4px;
+  background-color: var(--foundation-whitenormal);
+}
+
+.learning-path .rectangle-4 {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 4px;
+  height: 8px;
+  background-color: var(--foundation-whitenormal);
+}
+
+.learning-path .rectangle-5 {
+  position: absolute;
+  top: 0;
+  left: 8px;
+  width: 5px;
+  height: 12px;
+  background-color: var(--foundation-whitenormal);
+}
+
+.learning-path .text-wrapper-3 {
+  position: relative;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: "Inter-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 16px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+/* Card Info - Duration (Clock) */
+.learning-path .frame-4 {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  position: absolute;
+  top: 90px;
+  left: 17px;
+}
+
+.learning-path .tabler-clock-filled {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  aspect-ratio: 1;
+}
+
+.learning-path .vector {
+  position: absolute;
+  width: 91.67%;
+  height: 91.67%;
+  top: 8.33%;
+  left: 8.33%;
+}
+
+.learning-path .text-wrapper-4 {
+  position: relative;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: "Inter-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+/* Card Info - Rating (Star) */
+.learning-path .frame-5 {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 4px;
+  position: absolute;
+  top: 90px;
+  left: 117px;
+}
+
+.learning-path .material-symbols {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  aspect-ratio: 1;
+}
+
+.learning-path .img {
+  position: absolute;
+  width: 82.84%;
+  height: 85.52%;
+  top: 14.48%;
+  left: 17.16%;
+}
+
+/* Card Info - Level Bars */
+.learning-path .frame-6 {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  position: absolute;
+  top: 90px;
+  left: 205px;
+}
+
+.learning-path .rectangle-6 {
+  position: absolute;
+  top: 6px;
+  left: 0;
+  width: 3px;
+  height: 6px;
+  background-color: #20ecff;
+  border-radius: 1px;
+}
+
+.learning-path .rectangle-7,
+.learning-path .rectangle-9 {
+  position: absolute;
+  top: 3px;
+  left: 5px;
+  width: 3px;
+  height: 9px;
+  border-radius: 1px;
+  background-color: #d9d9d9;
+}
+
+.learning-path .rectangle-9 {
+  background-color: #20ecff;
+}
+
+.learning-path .rectangle-8,
+.learning-path .rectangle-10 {
+  position: absolute;
+  top: 0;
+  left: 10px;
+  width: 3px;
+  height: 12px;
+  border-radius: 1px;
+  background-color: #d9d9d9;
+}
+
+.learning-path .rectangle-10 {
+  background-color: #20ecff;
+}
+
+/* Card Info - Modules (Wallet) */
+.learning-path .frame-7 {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  position: absolute;
+  top: 124px;
+  left: 17px;
+}
+
+.learning-path .fluent-wallet {
+  position: relative;
+  width: 19px;
+  height: 19px;
+  aspect-ratio: 1;
+}
+
+.learning-path .vector-2 {
+  position: absolute;
+  width: 90.62%;
+  height: 90.62%;
+  top: 9.38%;
+  left: 9.38%;
+}
+
+.learning-path .text-wrapper-5 {
+  font-family: "Inter-Medium", Helvetica;
+  font-weight: 500;
+  position: relative;
+  width: fit-content;
+  margin-top: -1px;
+  color: #ffffff;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+/* Card Info - Enrolled Students (People) */
+.learning-path .frame-8 {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  position: absolute;
+  top: 124px;
+  left: 126px;
+}
+
+.learning-path .famicons-people {
+  position: relative;
+  width: 17px;
+  height: 17px;
+  aspect-ratio: 1;
+}
+
+.learning-path .vector-3 {
+  position: absolute;
+  width: 50.25%;
+  height: 84.19%;
+  top: 15.81%;
+  left: 49.75%;
+}
+
+.learning-path .vector-4 {
+  position: absolute;
+  width: 65.43%;
+  height: 43.57%;
+  top: 56.43%;
+  left: 34.57%;
+}
+
+.learning-path .vector-5 {
+  position: absolute;
+  width: 84.61%;
+  height: 77.94%;
+  top: 22.06%;
+  left: 15.39%;
+}
+
+.learning-path .vector-6 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+
+/* ==========================================
+   GLOBAL LINK ACCESSIBILITY & UTILITIES
+   ========================================== */
+.learning-path .frame-10 a,
+.learning-path .frame-11 a,
+.learning-path .frame-12 a,
+.learning-path .frame-13 a,
+.learning-path .navbar a {
+  color: inherit;
+}
+
+.learning-path .frame-10 a:focus-visible,
+.learning-path .frame-11 a:focus-visible,
+.learning-path .frame-12 a:focus-visible,
+.learning-path .frame-13 a:focus-visible,
+.learning-path .navbar a:focus-visible,
+.learning-path .vector-wrapper:focus-visible,
+.learning-path .text-wrapper-7:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
